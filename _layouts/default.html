@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Example Title</title>
+    {% include scripts.html %}
+  </head>
+
+  <body>
+    <img src="{{site.baseurl}}/assets/P8060428.jpg">
+    <div id="app">
+      <hello-world></hello-world>
+      {{ content }}
+    </div>
+  </body>
+</html>
