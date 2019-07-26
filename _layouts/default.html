@@ -6,10 +6,39 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Example Title</title>
     {% include scripts.html %}
+    <link rel="stylesheet" href="{{site.url}}/assets/css/style.css">
   </head>
 
   <body>
-    <img src="{{site.url}}/images/P8060428.jpg">
+    <div>
+      <svg id="hero" viewBox="0 0 4608 1250" version="1.1" filter="url(#green-pink-acid)">
+        <defs>
+          <pattern id="imgpattern" x="0" y="0" width="1" height="1">
+            <image xlink:href="{{site.url}}/assets/images/P8060427_flip.jpg" y="-700" filter="url(#dropshadow)" />
+          </pattern>
+          <filter id="dropshadow" height="130%">
+            <feGaussianBlur in="SourceAlpha" stdDeviation="3"/> <!-- stdDeviation is how much to blur -->
+            <feOffset dx="2" dy="2" result="offsetblur"/> <!-- how much to offset -->
+            <feComponentTransfer>
+              <feFuncA type="linear" slope="0.5"/> <!-- slope is the opacity of the shadow -->
+            </feComponentTransfer>
+            <feMerge>
+              <feMergeNode/> <!-- this contains the offset blurred image -->
+              <feMergeNode in="SourceGraphic"/> <!-- this contains the element that the filter is applied to -->
+            </feMerge>
+          </filter>
+          <!-- <filter id="blur"> -->
+          <!-- <feGaussianBlur in="SourceGraphic" stdDeviation="8"/> -->
+          <!-- </filter> -->
+        </defs>
+        <g>
+          <path d="M4608,966 L4608,1.13686838e-12 L-1.36424205e-12,1.13686838e-12 L-1.36424205e-12,600 C306.057309,519.402657 593.136199,479.103986 861.236671,479.103986 C1417.33267,479.103986 2318.41643,907.655489 2489.84831,1002.15032 C3117.3573,1348.03903 3823.40787,1335.98893 4608,966 Z" fill="url(#imgpattern)"></path>
+        </g>
+      </svg>
+      <div>
+        <img id="profile" src="{{site.url}}/assets/images/profile.jpg">
+      </div>
+    </div>
     <div id="app">
       <hello-world></hello-world>
       {{ content }}
