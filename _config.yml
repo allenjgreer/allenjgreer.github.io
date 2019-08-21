@@ -7,3 +7,6 @@ exclude:
   - webpack.config.js
   - src
 url: https://allenjgreer.github.io
+sass:
+    sass_dir: assets/stylesheets
+    style: compressed
