@@ -1,0 +1,15 @@
+.starmap#starmap
+.starmap-banner#starmap-banner
+  .starmapHeader--title
+    %h1.starmap--header Allen J. Greer
+    %p#occupation Software Engineer |&nbsp
+  .starmap--banner-links
+    %a{href: 'https://github.com/allenjgreer'}
+      %img{src: '../assets/images/GitHub-Mark-Light-120px-plus.png', height: '40px', width: '40px'}
+    %a{href: 'https://linkedin.com/in/allen-greer'}
+      %img{src: '../assets/images/LI-In-Bug.png', height: '40px', width: '47px'}
+  .starmapAnimation
+    %p Animation
+    %input.toggle#starmap-stop{type: :checkbox}
+.container
+  {% haml app.haml %}
