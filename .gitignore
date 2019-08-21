@@ -1,5 +1,4 @@
 bin/
-_site
 .bundle/
 .eslintrc.yml
 .tern-port
