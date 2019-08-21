@@ -6,7 +6,9 @@ exclude:
   - package.json
   - webpack.config.js
   - src
-url: https://allenjgreer.github.io
+plugins:
+  - jekyll-haml
 sass:
     sass_dir: assets/stylesheets
     style: compressed
+url: https://allenjgreer.github.io

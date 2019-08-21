@@ -7,9 +7,6 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 ruby '2.6.3'
 
 gem 'awesome_print', group: :development
-gem 'jekyll'
+gem 'github-pages', group: :jekyll_plugins
+gem 'jekyll-haml'
 gem 'pry'
-
-group :jekyll_plugins do
-  gem 'jekyll-haml'
-end
