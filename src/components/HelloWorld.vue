@@ -1,5 +1,5 @@
 <template>
-  <h1>Jekyll-Vue Template</h1>
+  <h1>Welcome to my personal website</h1>
 </template>
 
 <script>
@@ -9,8 +9,4 @@
 </script>
 
 <style scoped>
-  /* h1 { */
-    /* font-size: 2rem; */
-
-  /* } */
 </style>
