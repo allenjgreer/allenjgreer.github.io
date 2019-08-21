@@ -1,1 +1,6 @@
+bin/
 _site
+.bundle/
+.eslintrc.yml
+.tern-port
+.bundle_install_notes
