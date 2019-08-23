@@ -57,10 +57,10 @@ class StarMap {
     this.particles = {
       array: [],
       color: '#fff',
-      number: 500,
-      opacity: 0.5,
+      number: 1000,
+      opacity: 0.3,
       size: {
-        value: 2,
+        value: 1.5,
         random: true
       }
     }
@@ -132,7 +132,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
   window.starmap = map
 
   let animateState = false
-  document.getElementById('starmap-stop').onclick = function (event) {
+  document.getElementById('animation-toggle').onclick = function (event) {
     if (animateState) {
       window.cancelAnimationFrame(request)
       animateState = false
@@ -141,9 +141,10 @@ window.addEventListener('DOMContentLoaded', (event) => {
       animateState = true
     }
   }
-  let mailto = document.createElement('a')
-  mailto.classList.add('starmap--link')
+  let mailto = document.getElementById('reach-me')
+  // let mailto = document.createElement('a')
+  // mailto.classList.add('starmap--link')
   mailto.href = '\x6d\x61\x69\x6c\x74\x6f\x3a\x61\x6c\x6c\x65\x6e\x2b\x70\x61\x67\x65\x73\x40\x69\x6e\x64\x65\x76\x63\x6f\x2e\x69\x6f'
   mailto.innerHTML = '\x61\x6c\x6c\x65\x6e\x40\x69\x6e\x64\x65\x76\x63\x6f\x2e\x69\x6f'
-  document.getElementById('occupation').appendChild(mailto)
+  // document.getElementById('occupation').appendChild(mailto)
 })

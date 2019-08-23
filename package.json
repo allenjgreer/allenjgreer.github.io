@@ -1,7 +1,7 @@
 {
   "name": "personal",
   "version": "1.0.0",
-  "description": "",
+  "description": "Allen J. Greer - Personal Website",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -13,8 +13,7 @@
     "type": "git",
     "url": "git+https://github.com/allenjgreer/allenjgreer.github.io.git"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "Allen J. Greer",
   "bugs": {
     "url": "https://github.com/allenjgreer/allenjgreer.github.io/issues"
   },
@@ -38,9 +37,7 @@
     "html-webpack-plugin": "^3.2.0",
     "install": "^0.13.0",
     "node-sass": "^4.12.0",
-    "sass-lint": "^1.13.1",
     "sass-loader": "^7.1.0",
-    "stylelint": "^10.1.0",
     "vue-loader": "^15.7.1",
     "vue-style-loader": "^4.1.2",
     "vue-template-compiler": "^2.6.10",
