@@ -1,10 +1,8 @@
 import Vue from 'vue'
-import HelloWorld from './components/HelloWorld'
+import App from './App.vue'
 
-Vue.component('helloWorld', HelloWorld)
-
-document.addEventListener('DOMContentLoaded', (event) => {
-  const app = new Vue({
-    el: '#app'
-  });
-});
+document.addEventListener('DOMContentLoaded', () => {
+  window.stars = new Vue({
+    render: h => h(App)
+  }).$mount('#app')
+})

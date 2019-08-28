@@ -1,38 +1,61 @@
 const path = require('path')
-const webpack = require('webpack')
-const HtmlWebpackPlugin = require('html-webpack-plugin')
+const webpack = require('webpack') // eslint-disable-line
 const VueLoaderPlugin = require('vue-loader/lib/plugin')
 
 module.exports = {
   entry: './src/main.js',
-  output: {
-    path: path.resolve(__dirname, './dist'),
-    filename: 'build.js'
-  },
   mode: 'development',
   module: {
     rules: [
       {
-        test: /\.vue$/,
-        loader: 'vue-loader',
-        options: {
-          loaders: {
-            scss: ['vue-style-loader', 'css-loader', 'sass-loader']
+        test: /\.js$/,
+        exclude: /(node_modules)/,
+        use: {
+          loader: 'babel-loader',
+          options: {
+            presets: ['@babel/preset-env']
           }
         }
+      },
+      {
+        test: /\.vue$/,
+        loader: 'vue-loader'
+      },
+      {
+        test: /\.css$/,
+        use: [
+          'vue-style-loader',
+          'css-loader'
+        ]
+      },
+      {
+        test: /\.sass$/,
+        use: [
+          'vue-style-loader',
+          'css-loader',
+          {
+            loader: 'sass-loader',
+            options: {
+              indentedSyntax: true
+            }
+          }
+        ]
+      },
+      {
+        test: /\.(png|svg|jpg|gif)$/,
+        use: [
+          'file-loader'
+        ]
       }
     ]
   },
+  output: {
+    path: path.resolve(__dirname, './dist'),
+    filename: 'build.js'
+  },
   plugins: [
-    new HtmlWebpackPlugin({
-      filename: './../_includes/scripts.html',
-      template: './_includes/_scripts.html'
-    }),
-    new VueLoaderPlugin()
+    new VueLoaderPlugin(),
   ],
-  // This allows us to call a module import using only the filename without the
-  // extension. For example, we can use import vueComponent from
-  // 'components/vueComponent' without the .vue extension.
   resolve: {
     alias: {
       vue$: 'vue/dist/vue.esm.js'
