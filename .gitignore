@@ -1,6 +1,5 @@
 .idea
 assets/js
-dist/
 bin/
 index.haml
 .bundle/
