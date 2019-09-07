@@ -46,6 +46,7 @@ $main-header-background: linear-gradient(0deg, rgba(71,71,71,0.85) 75%, rgba(130
       color: red
 
   h1
+    align-items: center
     display: flex
     flex-basis: 100%
     font-size: calc(10px + (18 - 10) * (100vw - 400px) / (2560 - 400))
