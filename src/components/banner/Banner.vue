@@ -21,9 +21,13 @@
 
 <style lang="sass">
 .banner
+  @media (min-width: 480px)
+    flex-direction: row
+
   color: white
   display: flex
   height: calc(100% - 15vmin - 100px)
+  flex-direction: column
   position: absolute
   top: 100px
 

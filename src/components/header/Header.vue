@@ -34,7 +34,13 @@ $main-header-background: linear-gradient(0deg, rgba(71,71,71,0.85) 75%, rgba(130
 
   a
     color: white
+    display: flex
+    flex-basis: 25%
     text-decoration: none
+    padding: 10px
+
+    @media (min-width: 480px)
+      flex-basis: 0
 
     &:hover
       color: red
@@ -66,7 +72,9 @@ $main-header-background: linear-gradient(0deg, rgba(71,71,71,0.85) 75%, rgba(130
 .headerNav
   display: flex
   flex: 1
-  justify-content: space-evenly
+  flex-wrap: wrap
+  height: 100%
+  align-content: space-evenly
   width: 50vw
 
   img
