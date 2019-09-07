@@ -130,6 +130,9 @@ export default {
 </script>
 
 <style lang="sass">
+.container
+  height: 100vh
+
 .starmap
   height: calc(100% + 25px)
   width: 100%

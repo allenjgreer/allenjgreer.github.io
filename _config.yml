@@ -6,6 +6,7 @@ exclude:
   - package.json
   - webpack.config.js
   - src
+  - .idea
 plugins:
   - jekyll-haml
 sass:

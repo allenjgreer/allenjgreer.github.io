@@ -1,0 +1,12 @@
+<svg viewBox="0 0 760 260" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+    <g id="Desktop-HD" transform="translate(-340.000000, -382.000000)">
+      <g id="Download-CV" transform="translate(345.000000, 387.000000)">
+        <rect id="Rectangle" stroke="#D8D8D8" stroke-width="10" fill="#3E3E3E" x="0" y="0" width="750" height="250" rx="112"></rect>
+        <text font-family="Roboto-Regular, Roboto" font-size="90" font-weight="normal" fill="#D8D8D8">
+          <tspan x="106.181152" y="160">Download CV</tspan>
+        </text>
+      </g>
+    </g>
+  </g>
+</svg>

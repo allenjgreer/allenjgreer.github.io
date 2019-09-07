@@ -1,0 +1,12 @@
+<svg width="750px" height="250px" viewBox="0 0 750 250" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+    <g id="Desktop-HD" transform="translate(-270.000000, -373.000000)">
+      <g id="Read-More" transform="translate(270.000000, 373.000000)">
+        <rect id="Rectangle" fill="#D8D8D8" x="0" y="0" width="750" height="250" rx="112"></rect>
+        <text font-family="Roboto-Regular, Roboto" font-size="90" font-weight="normal" fill="#30323A">
+          <tspan x="159.35498" y="157">Read More</tspan>
+        </text>
+      </g>
+    </g>
+  </g>
+</svg>
