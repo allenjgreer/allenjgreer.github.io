@@ -3,22 +3,22 @@
     <Header />
     <div class="starmap">
       <canvas ref="starmap" />
-      <a href="#">
-        <img src="assets/images/readMore-pill.svg">
-      </a>
       <div class="left-wing" />
       <div class="right-wing" />
     </div>
+    <Banner />
   </div>
 </template>
 
 <script>
-import Header from './header.vue'
+import Header from '../header/Header.vue'
+import Banner from '../banner/Banner.vue'
 
 export default {
   name: 'Starmap',
   components: {
-    Header
+    Header,
+    Banner
   },
   data() {
     return {
@@ -64,8 +64,10 @@ export default {
     },
     createParticles() {
       for (let i = 0; i < this.particles.number; i++) {
-        let radius =
-          Math.floor((this.particles.size.random ? Math.random() : 1) * this.particles.size.value)
+        let radius = Math.floor(
+          (this.particles.size.random ? Math.random() : 1) *
+            this.particles.size.value
+        )
         let x = Math.floor(Math.random() * this.canvas.width)
         let y = Math.floor(Math.random() * this.canvas.height)
         let vx = Math.random() - 0.5
@@ -105,7 +107,7 @@ export default {
         particle.y *= this.canvas.height / oldHeight
       }
 
-      this.canvas.context.clearRect(0, 0, oldWidth, oldHeight)
+      this.clearCanvas()
       this.drawParticles()
     },
     updateParticles() {
@@ -128,34 +130,24 @@ export default {
 </script>
 
 <style lang="sass">
-  .container
-    height: 100vh
+.starmap
+  height: calc(100% + 25px)
+  width: 100%
 
-  .starmap
+  canvas
     height: 100%
     width: 100%
 
-    canvas
-      width: 100%
-      height: 100%
+.left-wing
+  border-bottom: 30vmin solid #fff
+  border-right: 65vw solid transparent
+  bottom: -25px
+  position: absolute
 
-    svg.down-nav
-      position: absolute
-      left: calc(50vw - 10px)
-      bottom: 70px
-      width: 20px
-
-  .left-wing
-    border-bottom: 15vw solid #fff
-    border-right: 60vw solid transparent
-    bottom: 0
-    left: 0
-    position: absolute
-
-  .right-wing
-    border-bottom: 15vw solid #fff
-    border-left: 60vw solid transparent
-    bottom: 0
-    position: absolute
-    right: 0
+.right-wing
+  border-bottom: 30vmin solid #fff
+  border-left: 65vw solid transparent
+  bottom: -25px
+  position: absolute
+  right: 25px
 </style>

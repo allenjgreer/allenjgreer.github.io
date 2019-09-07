@@ -1,0 +1,6 @@
+---
+  extends:
+    - stylelint-config-sass-guidelines
+  rules:
+    declaration-block-trailing-semicolon: never
+    block-opening-brace-space-before: never

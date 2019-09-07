@@ -1,9 +1,28 @@
 const path = require('path')
-const webpack = require('webpack') // eslint-disable-line
+const webpack = require('webpack')
 const VueLoaderPlugin = require('vue-loader/lib/plugin')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = {
-  entry: './src/main.js',
+  entry: {
+    app: './src/main.js'
+  },
+  watch: true,
+  output: {
+    filename: '[name].bundle.js',
+    path: path.resolve(__dirname, 'dist'),
+  },
+  devServer: {
+    stats: {
+      children: false,
+      maxModules: 0
+    },
+    clientLogLevel: 'warn',
+    compress: true,
+    host: '0.0.0.0',
+    hot: true,
+    port: 8080
+  },
   mode: 'development',
   module: {
     rules: [
@@ -24,37 +43,38 @@ module.exports = {
       {
         test: /\.css$/,
         use: [
-          'vue-style-loader',
+          'style-loader',
           'css-loader'
         ]
       },
       {
-        test: /\.sass$/,
+        test: /\.s[ac]ss$/i,
         use: [
           'vue-style-loader',
           'css-loader',
           {
             loader: 'sass-loader',
             options: {
-              indentedSyntax: true
+              sassOptions: { indentedSyntax: true }
             }
           }
         ]
       },
       {
-        test: /\.(png|svg|jpg|gif)$/,
-        use: [
-          'file-loader'
-        ]
+        test: /\.(png|svg|jpe?g|gif|pdf)$/,
+        loader: 'file-loader',
+        options: {
+          name: 'assets/images/[hash].[ext]'
+        }
       }
     ]
   },
-  output: {
-    path: path.resolve(__dirname, './dist'),
-    filename: 'build.js'
-  },
   plugins: [
     new VueLoaderPlugin(),
+    new webpack.HotModuleReplacementPlugin(),
+    new HtmlWebpackPlugin({
+      template: 'index.html'
+    })
   ],
   resolve: {
     alias: {

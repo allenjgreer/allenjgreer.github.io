@@ -1,39 +1,42 @@
 {
-  "name": "personal_website",
+  "name": "personal-webite",
   "version": "1.0.0",
-  "description": "Allen J. Greer - Personal Website",
+  "description": "Allen J. Greer's Personal Website (Built with love with Jekyll & Vue.js)",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "start": "webpack-dev-server --color --progress"
+  },
   "repository": "git+https://github.com/allenjgreer/allenjgreer.github.io.git",
   "author": "Allen J. Greer",
   "bugs": {
     "url": "https://github.com/allenjgreer/allenjgreer.github.io/issues"
   },
   "homepage": "https://github.com/allenjgreer/allenjgreer.github.io#readme",
-  "dependencies": {
-    "eslint": "^6.2.2",
-    "global": "^4.4.0",
-    "vue": "^2.6.10",
-    "webpack": "^4.39.3"
-  },
   "devDependencies": {
-    "@babel/core": "^7.5.5",
-    "@babel/preset-env": "^7.5.5",
+    "@babel/core": "^7.6.0",
+    "@babel/preset-env": "^7.6.0",
     "babel-loader": "^8.0.6",
     "css-loader": "^3.1.0",
-    "eslint-plugin-import": "^2.18.2",
+    "eslint": "^6.3.0",
+    "eslint-loader": "^3.0.0",
     "eslint-plugin-vue": "^5.2.3",
     "file-loader": "^4.2.0",
+    "html-webpack-plugin": "^3.2.0",
     "node-sass": "^4.12.0",
-    "sass-loader": "^7.3.1",
-    "vls": "^0.1.9",
-    "vue-language-server": "^0.0.60",
+    "normalize.css": "^8.0.1",
+    "sass-loader": "^8.0.0",
+    "style-loader": "^1.0.0",
+    "stylelint": "^10.1.0",
+    "stylelint-config-sass-guidelines": "^6.0.0",
+    "vue": "^2.6.10",
     "vue-loader": "^15.7.1",
     "vue-style-loader": "^4.1.2",
     "vue-template-compiler": "^2.6.10",
+    "webpack": "^4.39.3",
     "webpack-cli": "^3.3.7",
     "webpack-dev-server": "^3.8.0"
   },
   "license": "MIT",
-  "private": false
+  "private": false,
+  "dependencies": {}
 }

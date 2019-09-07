@@ -1,25 +1,26 @@
 <template>
   <div id="app">
     <Starmap />
-    <div style="height: 200vh" />
+    <div id="main-container" style="height: 200vh" />
     <Footer />
   </div>
 </template>
 
 <script>
-  import Footer from './components/footer.vue'
-  import Starmap from './components/Starmap.vue'
+    import Footer from './components/footer.vue'
+    import Starmap from './components/starmap/Starmap.vue'
 
-  export default {
-    name: 'App',
-    components: {
-      Footer,
-      Starmap
+    export default {
+        name: 'App',
+        components: {
+            Footer,
+            Starmap
+        }
     }
-  }
 </script>
 
 <style lang="sass">
-adfasdf
-
+  #app
+    border: 25px solid rgb(116, 190, 196)
+    border-top: 0
 </style>
