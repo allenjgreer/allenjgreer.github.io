@@ -3,7 +3,7 @@
     <div class="blurb-container">
       <div class="blurb">
         <h1>Hi! I am Allen Greer</h1>
-        <p>I am a Software Developer Based out of Vancvouer, BC</p>
+        <p>I am a Software Developer Based out of Vancouver, BC</p>
         <a href="#main-container"><img :src="require(`./readMore-pill.svg`)"></a>
         <a :href="require(`./Resume.pdf`)" target="_blank"><img :src="require(`./downloadCV-pill.svg`)"></a>
       </div>
